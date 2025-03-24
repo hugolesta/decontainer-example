@@ -1,0 +1,22 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/nix:1": {}
+  },
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.aws",
+      "target": "/home/vscode/.aws",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:HOME}/.terraform.d",
+      "target": "/home/vscode/.terraform.d",
+      "type": "bind"
+    }
+  ],
+  "runArgs": [
+    "--env-file",
+    "${localEnv:HOME}/.env"
+  ]
+}

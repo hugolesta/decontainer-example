@@ -13,6 +13,11 @@
       "source": "${localEnv:HOME}/.terraform.d",
       "target": "/home/vscode/.terraform.d",
       "type": "bind"
+    },
+    {
+      "source": "${localEnv:HOME}/.kube",
+      "target": "/home/vscode/.kube",
+      "type": "bind"
     }
   ],
   "runArgs": [
